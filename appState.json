@@ -1,0 +1,110 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "03e7f5d2-9c02-485e-9417-c8c22c41f66b": {
+        "id": "03e7f5d2-9c02-485e-9417-c8c22c41f66b",
+        "parent": null,
+        "name": "indunilgcp",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "104390e3-8b81-4ba5-8804-5ab3613a9d9c"
+        ],
+        "isRemovable": false,
+        "filePath": "indunilgcp"
+      },
+      "104390e3-8b81-4ba5-8804-5ab3613a9d9c": {
+        "id": "104390e3-8b81-4ba5-8804-5ab3613a9d9c",
+        "parent": "03e7f5d2-9c02-485e-9417-c8c22c41f66b",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "indunilgcp/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "scheduler-trigger",
+            "config": {
+              "type": "",
+              "schedulePattern": "0 */3 * * *",
+              "jobId": "JbId1",
+              "timezone": "Pacific/Niue"
+            }
+          }
+        ]
+      },
+      "385a2ef1-ddc9-4f36-9eeb-f885c08d2089": {
+        "id": "385a2ef1-ddc9-4f36-9eeb-f885c08d2089",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.indunilgcpfunction = require(\"./indunilgcp/function.js\").handler;"
+      },
+      "bca69933-49a5-4ac5-9e7f-434e73aefe3e": {
+        "id": "bca69933-49a5-4ac5-9e7f-434e73aefe3e",
+        "parent": null,
+        "name": "main.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "main.py",
+        "code": "# This file is used to register all your cloud functions in GCP.\n# DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\n"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "03e7f5d2-9c02-485e-9417-c8c22c41f66b",
+    "openFiles": [
+      "104390e3-8b81-4ba5-8804-5ab3613a9d9c"
+    ],
+    "currentFileId": "104390e3-8b81-4ba5-8804-5ab3613a9d9c",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      },
+      "scheduler-trigger": {
+        "name": "scheduler-trigger",
+        "type": "scheduler-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "indunilgcp",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1567067563752
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "indunilgcp",
+      "url": "https://github.com/Indunil1992/indunilgcp"
+    }
+  }
+}
